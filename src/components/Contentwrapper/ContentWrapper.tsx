@@ -1,3 +1,4 @@
+import { ContentWrapperStyled } from "./ContentWrapper.Styles";
 import type { ContentWrapperProps } from "../../types/types";
 
 export const ContentWrapper = ({
@@ -14,10 +15,10 @@ export const ContentWrapper = ({
   }
 
   return (
-    <div>
+    <ContentWrapperStyled>
       {showTitle && <h1>{title}</h1>}
 
       <p>{children}</p>
-    </div>
+    </ContentWrapperStyled>
   );
 };

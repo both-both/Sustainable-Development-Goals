@@ -27,4 +27,8 @@ h3{
     font-size: ${({ theme }) => theme.fontSizes.m};
     color: ${({ theme }) => theme.colors.dark};
 }
+
+img {
+    width: 100%;
+}
 `;

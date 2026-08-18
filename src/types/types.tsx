@@ -30,3 +30,16 @@ export type UlProps = {
 export type LiProps = {
   children: React.ReactNode;
 };
+
+export type DivProps = {
+  children?: React.ReactNode;
+  className?: string;
+  height?: string;
+  width?: string;
+  color?: string;
+};
+
+export type FooterProps = {
+  img?: string;
+  children: React.ReactNode;
+};

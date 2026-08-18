@@ -17,4 +17,5 @@ export const theme = {
     l: "1.5rem",
     xl: "1.8rem",
   },
-};
+} as const;
+export type Theme = typeof theme;
