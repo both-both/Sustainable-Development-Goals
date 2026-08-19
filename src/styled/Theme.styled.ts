@@ -17,5 +17,12 @@ export const theme = {
     l: "1.5rem",
     xl: "1.8rem",
   },
+  lineHeigth: {
+    xs: "1.25rem",
+    s: "1.5rem",
+    m: "1.8rem",
+    l: "2rem",
+    xl: "2.5rem",
+  },
 } as const;
 export type Theme = typeof theme;

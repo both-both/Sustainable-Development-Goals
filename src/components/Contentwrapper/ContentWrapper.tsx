@@ -1,5 +1,6 @@
 import { ContentWrapperStyled } from "./ContentWrapper.Styles";
 import type { ContentWrapperProps } from "../../types/types";
+import { Div } from "../Div/Div";
 
 export const ContentWrapper = ({
   title,
@@ -16,9 +17,9 @@ export const ContentWrapper = ({
 
   return (
     <ContentWrapperStyled>
-      {showTitle && <h1>{title}</h1>}
+      <Div className="gray-bar">{showTitle && <h1>{title}</h1>}</Div>
 
-      <p>{children}</p>
+      <Div className="main-container">{children}</Div>
     </ContentWrapperStyled>
   );
 };

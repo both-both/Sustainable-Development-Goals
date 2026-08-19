@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { resetList } from "../../styled/mixins";
 
 export const NavBarStyled = styled.nav`
   ul {
-    list-style: none;
+    ${resetList}
     font-family: Oswald;
     text-transform: uppercase;
     display: flex;

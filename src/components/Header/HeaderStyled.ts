@@ -1,20 +1,15 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
-  .blue-bar {
-    width: 100%;
-    height: 30px;
-    background-color: ${({ theme }) => theme.colors["primary"]};
-  }
-  .header-main {
-    width: 80%;
-    margin: auto;
-    padding: 1.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   img {
-    width: 100%;
+    max-width: 30vw;
   }
 `;

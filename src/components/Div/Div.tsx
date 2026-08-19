@@ -1,12 +1,10 @@
 import type { DivProps } from "../../types/types";
-import { DivStyled } from "./Div.styled";
+import { DivStyled } from "./Div.Styled";
 
-export const div = ({
-  children,
-  className,
-  height,
-  width,
-  color,
-}: DivProps) => {
-  return <DivStyled height={height}>{children}</DivStyled>;
+export const Div = ({ children, className, as }: DivProps) => {
+  return (
+    <DivStyled as={as} className={className}>
+      {children}
+    </DivStyled>
+  );
 };

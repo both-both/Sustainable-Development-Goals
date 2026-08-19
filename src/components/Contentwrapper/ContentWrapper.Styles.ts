@@ -1,13 +1,10 @@
 import styled from "styled-components";
 
 export const ContentWrapperStyled = styled.div`
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors["secondary"]};
-  display: flex;
-
   h1 {
+    padding: 2rem 0;
     width: 80%;
+    max-width: 1200px;
     margin: auto;
-    align-items: center;
   }
 `;

@@ -37,9 +37,23 @@ export type DivProps = {
   height?: string;
   width?: string;
   color?: string;
+  as?: React.ElementType;
+};
+
+export type GoalSectionProps = {
+  children: React.ReactNode;
+};
+export type GoalProps = {
+  src: string;
+  alt: string;
+};
+
+export type SubjectProps = {
+  title: string;
+  color: string;
 };
 
 export type FooterProps = {
   img?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };

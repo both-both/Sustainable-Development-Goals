@@ -5,7 +5,7 @@ import MS from "../../assets/images/MS Logo.png";
 import GG from "../../assets/images/Globale Gymnasier Logo.png";
 import Danida from "../../assets/images/Danida Logo.png";
 
-export const Footer = () => {
+export const Footer = ({ children }: FooterProps) => {
   return (
     <FooterStyled>
       <div className="footer-container">
@@ -39,6 +39,7 @@ export const Footer = () => {
           <img src={Danida} alt="Danida logo" />
         </div>
       </div>
+      {children}
     </FooterStyled>
   );
 };
