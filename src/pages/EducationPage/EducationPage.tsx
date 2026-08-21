@@ -1,5 +1,5 @@
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
-import { SubjectGrid } from "../../components/SubjectGrid/SubjectGrid";
+import { SubjectGrid } from "../../components/molecules/SubjectGrid/SubjectGrid";
 
 export const EducationPage = () => {
   return (

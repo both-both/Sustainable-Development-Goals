@@ -1,7 +1,7 @@
-import { Footer } from "./components/Footer/Footer";
+import { Footer } from "./components/organisms/Footer/Footer";
 import { Main } from "./components/Main/Main";
-import { AppRouter } from "./components/AppRouter/AppRouter";
-import { Header } from "./components/Header/Header";
+import { AppRouter } from "./router/AppRouter/AppRouter";
+import { Header } from "./components/organisms/Header/Header";
 
 const App = () => {
   return (
