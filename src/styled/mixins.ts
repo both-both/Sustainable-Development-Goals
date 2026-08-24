@@ -7,3 +7,6 @@ export const reset = `
 export const resetList = `
   list-style: none;
 `;
+
+export const resetLink = `
+  text-decoration: none`;

@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { resetList } from "../../../styled/mixins";
+import { resetLink, resetList } from "../../../styled/mixins";
 
 export const GoalCardStyled = styled.li<{ color: string }>`
   ${resetList}
 
   background-color: #${(props) => props.color};
   color: ${({ theme }) => theme.colors.light};
-
+  text-decoration: none;
   aspect-ratio: 1 / 1;
   padding: 0.75rem;
 
@@ -21,10 +21,9 @@ export const GoalCardStyled = styled.li<{ color: string }>`
     text-align: center;
   }
   div:nth-child(2) {
-    font-family: ${(props) => props.theme.fonts.secondary};
+    font-family: ${({ theme }) => theme.fonts.secondary};
     padding-left: 0.5rem;
     padding-top: 0.2rem;
-
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.1rem;
