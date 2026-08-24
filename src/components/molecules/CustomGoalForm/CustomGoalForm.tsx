@@ -1,5 +1,5 @@
 import FormGroup from "../FormGroup/FormGroup";
-import { CustomGoalFormStyled } from "./CustomGoalForm.styled";
+import { CustomGoalFormStyled } from "./CustomGoalForm.Styled";
 
 export const CustomGoalForm = () => {
   return (

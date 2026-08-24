@@ -9,7 +9,7 @@ body {
     font-family: ${(props) => props.theme.fonts.primary};
     font-size: ${({ theme }) => theme.fontSizes.s};
     color: ${({ theme }) => theme.colors.dark};
-    margin-bottom: 1.5rem;
+   
 
 }
 h1{ 
@@ -27,7 +27,7 @@ h2{
 h3{ 
     font-family: ${(props) => props.theme.fonts.primary};
     font-weight: 600;
-     margin-bottom: 1.5rem;
+     margin-bottom: 0.5rem;
     line-height: ${(props) => props.theme.lineHeigth.xl};
     font-size: ${({ theme }) => theme.fontSizes.l};
     color: ${({ theme }) => theme.colors.dark};

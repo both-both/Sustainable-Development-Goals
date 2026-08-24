@@ -25,4 +25,7 @@ export const DivStyled = styled.div<DivProps>`
     height: 220px;
     background-color: gold;
   }
+  &.text-container {
+    margin-bottom: 1.5rem;
+  }
 `;
