@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { goals } from "../../data/goals";
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
+import { VideoIframe } from "./DetailPage.Styled";
 
 export const DetailsPage = () => {
   const { id } = useParams();
@@ -18,13 +19,13 @@ export const DetailsPage = () => {
       >
         <article>
           <h3>{goal.byline}</h3>
-          <iframe
+          <VideoIframe
             src={goal.video_url}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-          ></iframe>
+          ></VideoIframe>
 
           <p>{goal.description}</p>
         </article>
