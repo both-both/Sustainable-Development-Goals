@@ -5,4 +5,5 @@ export type InputProps = {
   name: string;
   placeholder?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
 };

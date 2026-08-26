@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { resetLink, resetList } from "../../../styled/mixins";
+import { resetList } from "../../../styled/mixins";
 
 export const GoalCardStyled = styled.li<{ color: string }>`
   ${resetList}
 
-  background-color: #${(props) => props.color};
+  background-color: ${(props) => props.color};
   color: ${({ theme }) => theme.colors.light};
   text-decoration: none;
   aspect-ratio: 1 / 1;

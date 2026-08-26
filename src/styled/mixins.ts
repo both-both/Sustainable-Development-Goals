@@ -10,3 +10,8 @@ export const resetList = `
 
 export const resetLink = `
   text-decoration: none`;
+
+export const resetButton = `
+ background: none;
+  border: none;
+  cursor: pointer;`;

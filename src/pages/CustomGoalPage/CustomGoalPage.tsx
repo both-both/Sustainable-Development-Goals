@@ -1,5 +1,5 @@
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
-import { CustomGoalForm } from "../../components/molecules/CustomGoalForm/CustomGoalForm";
+import { CustomGoalDesigner } from "../../components/molecules/CustomGoalDesigner/CustomGoalDesigner";
 
 export const CustomGoalPage = () => {
   return (
@@ -14,7 +14,7 @@ export const CustomGoalPage = () => {
           Med tekst feltet herunder kan du bygge dit eget mål og give det en
           bestemt farve.
         </p>
-        <CustomGoalForm />
+        <CustomGoalDesigner />
       </ContentWrapper>
     </>
   );

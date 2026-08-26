@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import { goals } from "../../data/goals";
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
-import { VideoIframe } from "./DetailPage.Styled";
+import { VideoIframe, VideoRow } from "./DetailPage.Styled";
+import { LikeButton } from "../../components/atoms/LikeButton/LikeButton";
 
 export const DetailsPage = () => {
   const { id } = useParams();
@@ -19,13 +20,16 @@ export const DetailsPage = () => {
       >
         <article>
           <h3>{goal.byline}</h3>
-          <VideoIframe
-            src={goal.video_url}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></VideoIframe>
+          <VideoRow className="videoRow">
+            <VideoIframe
+              src={goal.video_url}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></VideoIframe>
+            <LikeButton />
+          </VideoRow>
 
           <p>{goal.description}</p>
         </article>
