@@ -1,9 +1,10 @@
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import { Button } from "../../atoms/Button/Button";
 import { PreviewCard } from "../../atoms/PreviewCard/PreviewCard";
 import {
   ButtonRowStyled,
   CustomGoalDesignerStyled,
+  FieldRowStyled,
   FormStyled,
 } from "./CustomGoalDesigner.Styled";
 
@@ -13,6 +14,15 @@ const initialColor = "#2BBBDE";
 export const CustomGoalDesigner = () => {
   const [text, setText] = useState<string>(initialText);
   const [color, setColor] = useState<string>(initialColor);
+  const [error, setError] = useState<string>("");
+
+  useEffect(() => {
+    if (!text) {
+      setError("Teksten må ikke være tom");
+    } else {
+      setError("");
+    }
+  }, [text]);
 
   const handleTextChange = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
@@ -32,21 +42,26 @@ export const CustomGoalDesigner = () => {
   return (
     <CustomGoalDesignerStyled>
       <FormStyled onSubmit={handleSubmit}>
-        <label htmlFor="goaltext">Måltekst</label>
-        <input
-          id="goaltext"
-          type="text"
-          value={text}
-          onChange={handleTextChange}
-        />
+        <FieldRowStyled>
+          <label htmlFor="goaltext">Måltekst</label>
+          <input
+            id="goaltext"
+            type="text"
+            value={text}
+            onChange={handleTextChange}
+          />
+          {error && <span style={{ color: "red" }}>{error}</span>}
+        </FieldRowStyled>
 
-        <label htmlFor="goalcolor">Farve</label>
-        <input
-          id="goalcolor"
-          type="color"
-          value={color}
-          onChange={handleColorChange}
-        />
+        <FieldRowStyled>
+          <label htmlFor="goalcolor">Farve</label>
+          <input
+            id="goalcolor"
+            type="color"
+            value={color}
+            onChange={(event) => setColor(event.target.value)}
+          />
+        </FieldRowStyled>
         <ButtonRowStyled>
           <Button type="submit" textValue="Gem"></Button>
           <Button
@@ -56,7 +71,6 @@ export const CustomGoalDesigner = () => {
           ></Button>
         </ButtonRowStyled>
       </FormStyled>
-
       <PreviewCard description={text} color={color} />
     </CustomGoalDesignerStyled>
   );

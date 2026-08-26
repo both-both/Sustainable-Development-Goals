@@ -8,13 +8,20 @@ export const CustomGoalDesignerStyled = styled.div`
 
 export const FormStyled = styled.form`
   display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  flex-direction: column;
   align-items: flex-start;
+  gap: 1rem;
+`;
+
+export const FieldRowStyled = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 `;
 
 export const ButtonRowStyled = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  align-items: flex-start;
 `;

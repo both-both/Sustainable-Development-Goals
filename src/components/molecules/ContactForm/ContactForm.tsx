@@ -1,7 +1,7 @@
 import { Button } from "../../atoms/Button/Button";
-
 import FormGroup from "../FormGroup/FormGroup";
 import { ContactFormStyled } from "./ContactForm.Styled";
+
 export const ContactForm = () => {
   return (
     <ContactFormStyled>
