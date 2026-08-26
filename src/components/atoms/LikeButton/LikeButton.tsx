@@ -10,10 +10,12 @@ const filledHeart =
 export const LikeButton = () => {
   const [liked, setLiked] = useState<boolean>(false);
   const [likeCount, setLikeCount] = useState<number>(0);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const handleClick = () => {
     setLiked(!liked);
     setLikeCount(liked ? likeCount - 1 : likeCount + 1);
+    setIsVisible(!isVisible);
   };
 
   return (
@@ -24,11 +26,13 @@ export const LikeButton = () => {
         viewBox="0 0 64 64"
         xmlns="http://www.w3.org/2000/svg"
       >
+        {isVisible ? "Liked" : "Like"}
         <LikeButtonStyled
           d={liked ? filledHeart : outlineHeart}
           $liked={liked}
         />
       </svg>
+      {isVisible && <p>Liked</p>}
       <>{likeCount}</>
     </LikeButtonWrapperStyled>
   );

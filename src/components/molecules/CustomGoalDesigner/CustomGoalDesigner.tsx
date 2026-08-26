@@ -6,7 +6,6 @@ import {
   CustomGoalDesignerStyled,
   FormStyled,
 } from "./CustomGoalDesigner.Styled";
-import { FormGroupStyled } from "../FormGroup/FormGroup.Styled";
 
 const initialText = "";
 const initialColor = "#2BBBDE";
