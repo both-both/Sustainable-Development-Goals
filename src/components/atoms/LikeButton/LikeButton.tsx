@@ -26,13 +26,13 @@ export const LikeButton = () => {
         viewBox="0 0 64 64"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {isVisible ? "Liked" : "Like"}
         <LikeButtonStyled
           d={liked ? filledHeart : outlineHeart}
           $liked={liked}
         />
       </svg>
-      {isVisible && <p>Liked</p>}
+      {isVisible ? "Liked " : "Like "}
+
       <>{likeCount}</>
     </LikeButtonWrapperStyled>
   );
