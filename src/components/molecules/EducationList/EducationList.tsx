@@ -12,6 +12,7 @@ export const EducationList = () => {
   const [error, setError] = useState<string>("");
 
   const url = "http://localhost:4000/api/education";
+
   useEffect(() => {
     const fetchData = async () => {
       try {
