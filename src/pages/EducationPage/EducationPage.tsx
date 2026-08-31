@@ -1,5 +1,5 @@
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
-import { SubjectGrid } from "../../components/molecules/SubjectGrid/SubjectGrid";
+import { EducationList } from "../../components/molecules/EducationList/EducationList";
 
 export const EducationPage = () => {
   return (
@@ -15,7 +15,7 @@ export const EducationPage = () => {
           spil sammen med dine elever. Øvelserne er udarbejdet på baggrund af
           bogen “Bliver verden bedre” og kernestof i fagene.
         </p>
-        <SubjectGrid />
+        <EducationList />
       </ContentWrapper>
     </>
   );

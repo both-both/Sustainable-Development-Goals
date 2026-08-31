@@ -6,15 +6,15 @@ export const ButtonStyled = styled.button`
   border: none;
   font-family: ${({ theme }) => theme.fonts.primary};
 
-  background-color: ${({ theme }) => theme.colors.dark};
-  color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.dark};
   cursor: pointer;
   transition:
     transform 0.1s ease,
     filter 0.15s ease;
 
   &:hover {
-    filter: brightness(1.1);
+    filter: brightness(0.8);
   }
 
   &:active {
