@@ -1,5 +1,5 @@
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
-import { CustomGoalDesigner } from "../../components/molecules/CustomGoalDesigner/CustomGoalDesigner";
+import { CustomGoalDesigner } from "../../components/modules/CustomGoalDesigner/CustomGoalDesigner";
 
 export const CustomGoalPage = () => {
   return (

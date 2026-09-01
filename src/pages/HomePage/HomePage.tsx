@@ -1,6 +1,6 @@
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
-import { GoalGrid } from "../../components/molecules/GoalGrid/GoalGrid";
-import { GoalSection } from "../../components/molecules/GoalSection/GoalSection";
+import { GoalGrid } from "../../components/modules/GoalGrid/GoalGrid";
+import { GoalSection } from "../../components/modules/GoalSection/GoalSection";
 
 export const HomePage = () => {
   return (

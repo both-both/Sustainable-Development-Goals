@@ -5,7 +5,7 @@ import MS from "../../../assets/images/MS Logo.png";
 import GG from "../../../assets/images/Globale Gymnasier Logo.png";
 import Danida from "../../../assets/images/Danida Logo.png";
 
-import { SignUpForm } from "../../molecules/SignUpForm/SignUpForm";
+import { SignUpForm } from "../../modules/SignUpForm/SignUpForm";
 
 export const Footer = ({ children }: FooterProps) => {
   return (

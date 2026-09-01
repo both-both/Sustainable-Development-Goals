@@ -1,6 +1,6 @@
 import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
-import { Button } from "../../atoms/Button/Button";
-import { PreviewCard } from "../../atoms/PreviewCard/PreviewCard";
+import { Button } from "../../elements/Button/Button";
+import { PreviewCard } from "../../elements/PreviewCard/PreviewCard";
 import {
   ButtonRowStyled,
   CustomGoalDesignerStyled,

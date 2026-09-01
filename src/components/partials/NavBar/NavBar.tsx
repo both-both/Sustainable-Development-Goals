@@ -1,6 +1,6 @@
 import type { NavbarProps } from "../../../types/types";
-import { Li } from "../../atoms/Li/Li";
-import { Ul } from "../../atoms/Ul/Ul";
+import { Li } from "../../elements/Li/Li";
+import { Ul } from "../../elements/Ul/Ul";
 import { NavLink } from "react-router-dom";
 import { NavBarStyled } from "./NavBar.Styled";
 
@@ -23,6 +23,9 @@ export const NavBar = ({}: NavbarProps) => {
         </Li>
         <Li>
           <NavLink to="/contact">Kontakt os</NavLink>
+        </Li>
+        <Li>
+          <NavLink to="/login">Login</NavLink>
         </Li>
       </Ul>
     </NavBarStyled>

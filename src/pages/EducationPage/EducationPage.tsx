@@ -1,5 +1,5 @@
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
-import { EducationList } from "../../components/molecules/EducationList/EducationList";
+import { EducationList } from "../../components/modules/EducationList/EducationList";
 
 export const EducationPage = () => {
   return (

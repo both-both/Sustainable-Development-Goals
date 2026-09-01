@@ -1,5 +1,5 @@
 import type { GoalSectionProps } from "../../../types/types";
-import { Div } from "../../atoms/Div/Div";
+import { Div } from "../../elements/Div/Div";
 import divider from "../../../assets/images/Divider.svg";
 import { GoalSectionStyled } from "./GoalSection.Styled";
 

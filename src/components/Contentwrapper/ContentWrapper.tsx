@@ -1,6 +1,6 @@
 import { ContentWrapperStyled } from "./ContentWrapper.Styles";
 import type { ContentWrapperProps } from "./ContentWrapper.types";
-import { Div } from "../atoms/Div/Div";
+import { Div } from "../elements/Div/Div";
 
 export const ContentWrapper = ({
   title,

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { goals } from "../../data/goals";
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
 import { VideoIframe, VideoRow } from "./DetailPage.Styled";
-import { LikeButton } from "../../components/atoms/LikeButton/LikeButton";
+import { LikeButton } from "../../components/elements/LikeButton/LikeButton";
 
 export const DetailsPage = () => {
   const { id } = useParams();

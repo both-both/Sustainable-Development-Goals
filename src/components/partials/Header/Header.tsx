@@ -1,5 +1,5 @@
-import { NavBar } from "../../organisms/NavBar/NavBar";
-import { Div } from "../../atoms/Div/Div";
+import { NavBar } from "../../partials/NavBar/NavBar";
+import { Div } from "../../elements/Div/Div";
 
 import { Link } from "react-router-dom";
 import { HeaderStyled } from "./HeaderStyled";

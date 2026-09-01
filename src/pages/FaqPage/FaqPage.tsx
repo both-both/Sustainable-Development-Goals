@@ -1,4 +1,4 @@
-import { Div } from "../../components/atoms/Div/Div";
+import { Div } from "../../components/elements/Div/Div";
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
 
 export const FaqPage = () => {

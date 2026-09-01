@@ -1,5 +1,5 @@
-import { Button } from "../../atoms/Button/Button";
-import { Input } from "../../atoms/Input/Input";
+import { Button } from "../../elements/Button/Button";
+import { Input } from "../../elements/Input/Input";
 import { SignUpFormStyled } from "./SignUpForm.Styled";
 
 export const SignUpForm = () => {
@@ -9,7 +9,7 @@ export const SignUpForm = () => {
   return (
     <SignUpFormStyled>
       <Input type="email" name="email" placeholder="Indtast din email" />
-      <Button textValue="Tilmeld" onClick={handleClick} />
+      <Button type="button" textValue="Tilmeld" onClick={handleClick} />
     </SignUpFormStyled>
   );
 };

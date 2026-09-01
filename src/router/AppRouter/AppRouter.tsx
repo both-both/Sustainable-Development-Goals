@@ -6,6 +6,7 @@ import { FaqPage } from "../../pages/FaqPage/FaqPage";
 import { ContactPage } from "../../pages/ContactPage/ContactPage";
 import { ErrorPage } from "../../pages/ErrorPage/ErrorPage";
 import { DetailsPage } from "../../pages/DetailsPage/DetailsPage";
+import { LoginPage } from "../../pages/LoginPage/LoginPage";
 
 export const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ export const AppRouter = () => {
       <Route path="/custom-goal" element={<CustomGoalPage />} />
       <Route path="/faq" element={<FaqPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/login" element={<LoginPage />} />
       <Route path="/*" element={<ErrorPage />} />
 
       <Route path="/goals/:id" element={<DetailsPage />} />
