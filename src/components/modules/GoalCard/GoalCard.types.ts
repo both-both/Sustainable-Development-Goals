@@ -3,4 +3,6 @@ export type goalProps = {
   title: string;
   color: string;
   icon: string;
+  byline: string;
+  description: string;
 };

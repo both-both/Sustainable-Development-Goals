@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { goals } from "../../../data/goals";
 import { GoalCard } from "../GoalCard/GoalCard";
-import { GoalGridStyled } from "./GoalGrid.Styled";
+import { GoalListStyled } from "./GoalList.Styled";
 
-export const GoalGrid = () => {
+export const GoalList = () => {
   return (
-    <GoalGridStyled>
+    <GoalListStyled>
       {goals.length === 0 ? (
         <p>Der er ingen verdensmål her</p>
       ) : (
@@ -20,6 +20,6 @@ export const GoalGrid = () => {
           </Link>
         ))
       )}
-    </GoalGridStyled>
+    </GoalListStyled>
   );
 };

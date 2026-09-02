@@ -7,6 +7,9 @@ import { ContactPage } from "../../pages/ContactPage/ContactPage";
 import { ErrorPage } from "../../pages/ErrorPage/ErrorPage";
 import { DetailsPage } from "../../pages/DetailsPage/DetailsPage";
 import { LoginPage } from "../../pages/LoginPage/LoginPage";
+import { ThemePage } from "../../pages/ThemePage/ThemePage";
+import { ThemeGoalList } from "../../components/modules/ThemeGoalList/ThemeGoalList";
+import { ThemeGoalDetails } from "../../components/modules/ThemeGoalDetails/ThemeGoalDetails";
 
 export const AppRouter = () => {
   return (
@@ -20,6 +23,11 @@ export const AppRouter = () => {
       <Route path="/*" element={<ErrorPage />} />
 
       <Route path="/goals/:id" element={<DetailsPage />} />
+
+      <Route path="/themes" element={<ThemePage />}>
+        <Route path=":theme_slug" element={<ThemeGoalList />} />
+        <Route path=":theme_slug/:goal_id" element={<ThemeGoalDetails />} />
+      </Route>
     </Routes>
   );
 };

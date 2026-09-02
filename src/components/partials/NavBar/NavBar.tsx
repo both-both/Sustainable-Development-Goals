@@ -12,6 +12,9 @@ export const NavBar = ({}: NavbarProps) => {
           <NavLink to="/">Verdensmål</NavLink>
         </Li>
         <Li>
+          <NavLink to="/themes">Temaer</NavLink>
+        </Li>
+        <Li>
           {" "}
           <NavLink to="/education-page">Undervisning</NavLink>
         </Li>

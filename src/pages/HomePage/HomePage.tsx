@@ -1,5 +1,5 @@
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
-import { GoalGrid } from "../../components/modules/GoalGrid/GoalGrid";
+import { GoalList } from "../../components/modules/GoalList/GoalList";
 import { GoalSection } from "../../components/modules/GoalSection/GoalSection";
 
 export const HomePage = () => {
@@ -42,7 +42,7 @@ export const HomePage = () => {
         </p>
       </ContentWrapper>
       <GoalSection>
-        <GoalGrid />
+        <GoalList />
       </GoalSection>
     </>
   );
