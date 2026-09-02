@@ -1,4 +1,7 @@
 import { Button } from "../../elements/Button/Button";
+import { Input } from "../../elements/Input/Input";
+import { Label } from "../../elements/Label/Label";
+import { Textarea } from "../../elements/Textarea/Textarea";
 import { FormGroup } from "../FormGroup/FormGroup";
 import { ContactFormStyled } from "./ContactForm.Styled";
 
@@ -7,18 +10,29 @@ export const ContactForm = () => {
     <ContactFormStyled>
       <fieldset>
         <FormGroup>
-          <label htmlFor="name">Navn:</label>
-          <input type="text" name="name" placeholder="Indtast dit navn" />
+          <div>
+            <Label htmlFor="name">Navn:</Label>
+            <Input type="text" name="name" placeholder="Indtast dit navn" />
+          </div>
         </FormGroup>
 
         <FormGroup>
-          <label htmlFor="email">Email:</label>
-          <input type="email" title="Email:" placeholder="Indtast din email" />
+          <div>
+            <Label htmlFor="email">Email:</Label>
+            <Input type="email" name="email" placeholder="Indtast din email" />
+          </div>
         </FormGroup>
 
         <FormGroup>
-          <label htmlFor="message">Besked:</label>
-          <input type="text" placeholder="Indtast din besked her" />
+          <div>
+            <Label htmlFor="message">Besked:</Label>
+            <Textarea
+              id="message"
+              name="message"
+              placeholder="Indtast din besked her"
+              rows={5}
+            />
+          </div>
         </FormGroup>
 
         <Button type="submit" textValue="Send" />

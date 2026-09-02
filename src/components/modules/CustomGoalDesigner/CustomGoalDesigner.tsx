@@ -4,9 +4,13 @@ import { PreviewCard } from "../../elements/PreviewCard/PreviewCard";
 import {
   ButtonRowStyled,
   CustomGoalDesignerStyled,
-  FieldRowStyled,
   FormStyled,
+  WideFormGroup,
 } from "./CustomGoalDesigner.Styled";
+
+import { Label } from "../../elements/Label/Label";
+import { Input } from "../../elements/Input/Input";
+import { ErrorText } from "../../elements/ErrorText/ErrorText";
 
 const initialText = "Hvad er dit verdensmål?";
 const initialColor = "#2BBBDE";
@@ -52,32 +56,38 @@ export const CustomGoalDesigner = () => {
   return (
     <CustomGoalDesignerStyled>
       <FormStyled onSubmit={handleSubmit}>
-        <FieldRowStyled>
-          <label htmlFor="goaltext">Måltekst</label>
-          <input
-            id="goaltext"
-            type="text"
-            value={text}
-            onChange={handleTextChange}
-            placeholder={initialText}
-            maxLength={30}
-          />
-          {textError && <span style={{ color: "red" }}>{textError}</span>}
-        </FieldRowStyled>
+        <WideFormGroup>
+          <div>
+            <Label htmlFor="goaltext">Måltekst</Label>
+            <Input
+              id="goaltext"
+              type="text"
+              name="goaltext"
+              value={text}
+              onChange={handleTextChange}
+              placeholder={initialText}
+              maxLength={30}
+            />
+          </div>
+          {textError && <ErrorText>{textError}</ErrorText>}
+        </WideFormGroup>
 
-        <FieldRowStyled>
-          <label htmlFor="goalcolor">Farve</label>
-          <input
-            id="goalcolor"
-            type="text"
-            value={color}
-            onChange={handleColorChange}
-            placeholder={initialColor}
-            pattern="#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
-            maxLength={7}
-          />
-          {colorError && <span style={{ color: "red" }}>{colorError}</span>}
-        </FieldRowStyled>
+        <WideFormGroup>
+          <div>
+            <Label htmlFor="goalcolor">Farve</Label>
+            <Input
+              id="goalcolor"
+              type="text"
+              name="goalcolor"
+              value={color}
+              onChange={handleColorChange}
+              placeholder={initialColor}
+              pattern="#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+              maxLength={7}
+            />
+          </div>
+          {colorError && <ErrorText>{colorError}</ErrorText>}
+        </WideFormGroup>
 
         <ButtonRowStyled>
           <Button type="submit" textValue="Gem"></Button>
@@ -88,7 +98,10 @@ export const CustomGoalDesigner = () => {
           ></Button>
         </ButtonRowStyled>
       </FormStyled>
-      <PreviewCard description={text} color={color} />
+      <PreviewCard
+        description={text || initialText}
+        color={color || initialColor}
+      />
     </CustomGoalDesignerStyled>
   );
 };

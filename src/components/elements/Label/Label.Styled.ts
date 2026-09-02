@@ -7,4 +7,5 @@ export const LabelStyled = styled.label`
   display: block;
   justify-content: center;
   align-items: center;
+  min-width: 7rem;
 `;

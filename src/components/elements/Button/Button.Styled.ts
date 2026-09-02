@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const ButtonStyled = styled.button`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
   border-radius: 0.3rem;
   padding: 4px 20px;
   border: none;

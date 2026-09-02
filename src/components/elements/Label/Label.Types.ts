@@ -1,5 +1,7 @@
+import type React from "react";
+
 export type LabelProps = {
-  title: string;
+  children: React.ReactNode;
   htmlFor: string;
   className?: string;
 };

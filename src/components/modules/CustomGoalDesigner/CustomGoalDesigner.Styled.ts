@@ -1,41 +1,22 @@
 import styled from "styled-components";
+import { FormGroup } from "../FormGroup/FormGroup";
 
 export const CustomGoalDesignerStyled = styled.div`
   display: flex;
-  gap: 2rem;
-  justify-content: space-between;
+  gap: 10%;
   padding-top: 2rem;
+`;
+
+export const WideFormGroup = styled(FormGroup)`
+  width: 25rem;
 `;
 
 export const FormStyled = styled.form`
   display: flex;
+  flex: 2;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-
-  label {
-    min-width: 6rem;
-  }
-
-  input {
-    background-color: ${({ theme }) => theme.colors["light"]};
-    border: 1px solid ${({ theme }) => theme.colors["dark"]};
-    width: auto;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.3rem;
-    outline: none;
-  }
-`;
-
-export const FieldRowStyled = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.3rem 1rem;
-
-  span {
-    flex-basis: 100%;
-  }
 `;
 
 export const ButtonRowStyled = styled.div`

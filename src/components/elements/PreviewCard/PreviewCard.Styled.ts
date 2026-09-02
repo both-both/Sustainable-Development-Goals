@@ -16,4 +16,5 @@ export const PreviewCardStyled = styled.div<{ color: string }>`
   justify-content: center;
   word-break: normal;
   text-transform: uppercase;
+  border: 0.5px solid black;
 `;
