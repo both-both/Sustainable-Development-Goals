@@ -1,6 +1,7 @@
 import { EducationListStyled } from "./EducationList.Styled";
 import { EducationCard } from "../EducationCard/EducationCard";
 import { useEffect, useState } from "react";
+import { Loader } from "../../elements/Loader/Loader";
 
 type Education = {
   id: number;
@@ -8,6 +9,7 @@ type Education = {
   color: string;
 };
 export const EducationList = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [data, setData] = useState<Education[]>([]);
   const [error, setError] = useState<string>("");
 
@@ -18,13 +20,32 @@ export const EducationList = () => {
       try {
         const response = await fetch(url);
         const jsonData: Education[] = await response.json();
-        setData(jsonData);
+        setTimeout(() => {
+          setData(jsonData);
+          setIsLoading(false);
+        }, 2000);
       } catch (err) {
         setError("Der opstod en fejl, på siden");
+        setIsLoading(false);
       }
     };
     fetchData();
   }, []);
+
+  if (isLoading) {
+    return (
+      <Loader
+        visible={isLoading}
+        height="80"
+        width="80"
+        color="#2BBBDE"
+        ariaLabel="tail-spin-loading"
+        radius="1"
+        wrapperStyle={{}}
+        wrapperClass=""
+      />
+    );
+  }
 
   return (
     <EducationListStyled>

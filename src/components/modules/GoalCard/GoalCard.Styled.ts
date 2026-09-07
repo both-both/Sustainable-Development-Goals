@@ -24,6 +24,7 @@ export const GoalCardStyled = styled.li<{ color: string }>`
     font-family: ${({ theme }) => theme.fonts.secondary};
     padding-left: 0.5rem;
     padding-top: 0.2rem;
+    word-wrap: break-word;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.1rem;
@@ -41,6 +42,7 @@ export const GoalCardStyled = styled.li<{ color: string }>`
   }
 
   svg {
+    aspect-ratio: 1 / 1;
     width: 55%;
     height: 55%;
     fill: ${({ theme }) => theme.colors.light};

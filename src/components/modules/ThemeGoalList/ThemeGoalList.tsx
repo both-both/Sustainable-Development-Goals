@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-
 import { Link, useParams } from "react-router-dom";
 import { ThemeGoalListStyled } from "./ThemeGoalList.styled";
 import { GoalCard } from "../GoalCard/GoalCard";
-import type { goalProps } from "../GoalCard/GoalCard.types";
+import type { GoalProps } from "../GoalCard/GoalCard.types";
 
 export const ThemeGoalList = () => {
-  const [apiData, setApiData] = useState<goalProps[]>([]);
+  const [apiData, setApiData] = useState<GoalProps[]>([]);
   const { theme_slug } = useParams();
 
   const getData = async () => {
@@ -27,7 +26,7 @@ export const ThemeGoalList = () => {
       {apiData &&
         apiData.map((item, index) => {
           return (
-            <Link to={`/theme/${theme_slug}/${item.id}`} key={index}>
+            <Link to={`/themes/${theme_slug}/${item.id}`} key={index}>
               <GoalCard
                 id={Number(item.id)}
                 title={item.title}

@@ -28,10 +28,6 @@ export type DivProps = {
 export type GoalSectionProps = {
   children: React.ReactNode;
 };
-export type GoalProps = {
-  src: string;
-  alt: string;
-};
 
 export type SubjectProps = {
   title: string;

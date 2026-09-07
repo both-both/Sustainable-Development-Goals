@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { ContentWrapper } from "../../components/Contentwrapper/ContentWrapper";
 import { ThemeNav } from "../../components/modules/ThemeNav/ThemeNav";
+import { ThemePageStyled } from "./ThemePage.styled";
 
 export const ThemePage = () => {
   return (
@@ -9,8 +10,14 @@ export const ThemePage = () => {
       description="her kan du se de forskellige temaer af de 17 verdensmål"
       showTitle={true}
     >
-      <ThemeNav />
-      <Outlet />
+      <ThemePageStyled>
+        <div>
+          <ThemeNav />
+        </div>
+        <div>
+          <Outlet />
+        </div>
+      </ThemePageStyled>
     </ContentWrapper>
   );
 };

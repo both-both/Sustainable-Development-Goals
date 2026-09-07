@@ -15,19 +15,19 @@ export const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      //theme section on the page
+      <Route path="/themes" element={<ThemePage />}>
+        <Route path=":theme_slug" element={<ThemeGoalList />} />
+        <Route path=":theme_slug/:goal_id" element={<ThemeGoalDetails />} />
+      </Route>
+      // Other subpages
       <Route path="/education-page" element={<EducationPage />} />
       <Route path="/custom-goal" element={<CustomGoalPage />} />
       <Route path="/faq" element={<FaqPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/*" element={<ErrorPage />} />
-
       <Route path="/goals/:id" element={<DetailsPage />} />
-
-      <Route path="/themes" element={<ThemePage />}>
-        <Route path=":theme_slug" element={<ThemeGoalList />} />
-        <Route path=":theme_slug/:goal_id" element={<ThemeGoalDetails />} />
-      </Route>
     </Routes>
   );
 };

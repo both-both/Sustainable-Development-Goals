@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { goalProps } from "../GoalCard/GoalCard.types";
+import { type GoalProps } from "../GoalCard/GoalCard.types";
 import { useParams } from "react-router-dom";
 
 export const ThemeGoalDetails = () => {
-  const [apiData, setApiData] = useState<goalProps | null>(null);
+  const [apiData, setApiData] = useState<GoalProps | null>(null);
   const { goal_id } = useParams();
 
   const getData = async () => {

@@ -21,7 +21,7 @@ export const ThemeNav = () => {
 
   return (
     <ThemeNavStyled>
-      <h3>Vælg tema:</h3>
+      <h4>Vælg tema</h4>
       <ul>
         {apiData &&
           apiData.map((item) => {
