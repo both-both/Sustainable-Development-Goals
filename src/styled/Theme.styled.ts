@@ -4,6 +4,16 @@ export const theme = {
     secondary: "#EDEDED",
     dark: "#111111",
     light: "#ffffff",
+
+    lightmode: {
+      background: "#fff",
+      text: "#222",
+    },
+
+    darkmode: {
+      background: "#1e1e1e",
+      text: "#fff",
+    },
   },
 
   fonts: {

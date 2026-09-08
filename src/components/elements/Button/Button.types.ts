@@ -1,6 +1,6 @@
 export type ButtonProps = {
-  textValue: string;
+  textValue?: string;
   className?: string;
   onClick?: () => void;
-  type: "button" | "submit" | "reset";
+  type?: "button" | "submit" | "reset";
 };

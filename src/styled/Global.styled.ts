@@ -10,6 +10,10 @@ body {
     font-size: ${({ theme }) => theme.fontSizes.s};
     color: ${({ theme }) => theme.colors.dark};
    
+ &.dark-mode {
+    background-color: ${({ theme }) => theme.colors.darkmode.background};
+    color: ${({ theme }) => theme.colors.darkmode.text};
+  }
 
 }
 h1{ 
