@@ -1,8 +1,8 @@
-import type { EducationProps } from "./Education.types";
+import type { EducationCardProps } from "./EducationCard.types";
 import { EducationCardStyled } from "./EducationCard.Styled";
 
-export const EducationCard = ({ title, color }: EducationProps) => (
+export const EducationCard = ({ name, color }: EducationCardProps) => (
   <EducationCardStyled $bgColor={color}>
-    <h2>{title}</h2>
+    <h2>{name}</h2>
   </EducationCardStyled>
 );

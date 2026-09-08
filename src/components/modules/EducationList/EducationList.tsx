@@ -1,37 +1,16 @@
 import { EducationListStyled } from "./EducationList.Styled";
 import { EducationCard } from "../EducationCard/EducationCard";
-import { useEffect, useState } from "react";
 import { Loader } from "../../elements/Loader/Loader";
 
-type Education = {
-  id: number;
-  name: string;
-  color: string;
-};
+import { useFetch } from "../../../hooks/useFetch";
+import { endpoints } from "../../../data/Endpoints";
+import type { EducationListResponse } from "./EducationList.types";
+
 export const EducationList = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [data, setData] = useState<Education[]>([]);
-  const [error, setError] = useState<string>("");
-
-  const url = "http://localhost:4000/api/education";
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        const jsonData: Education[] = await response.json();
-        setTimeout(() => {
-          setData(jsonData);
-          setIsLoading(false);
-        }, 2000);
-      } catch (err) {
-        setError("Der opstod en fejl, på siden");
-        setIsLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
-
+  const { data, isLoading, error } = useFetch<EducationListResponse>(
+    endpoints.education,
+  );
+  console.log(isLoading);
   if (isLoading) {
     return (
       <Loader
@@ -49,9 +28,10 @@ export const EducationList = () => {
 
   return (
     <EducationListStyled>
-      {data.map((item) => (
-        <EducationCard key={item.id} title={item.name} color={item.color} />
-      ))}
+      {data &&
+        data.map((item) => (
+          <EducationCard key={item.id} name={item.name} color={item.color} />
+        ))}
       {error && <p>{error}</p>}
     </EducationListStyled>
   );
